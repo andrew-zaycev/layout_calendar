@@ -1,8 +1,8 @@
 @import "./normalize.scss";
+@import "./variables.scss";
 
 .calendar {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 1px;
   width: 706px;
@@ -33,17 +33,6 @@
     }
   }
 }
-
-$margin: 101px;
-
-$days:
-  "mon" 0,
-  "tue" 1,
-  "wed" 2,
-  "thu" 3,
-  "fri" 4,
-  "sat" 5,
-  "sun" 6;
 
 @each $day-week, $index in $days {
   .calendar-#{$day-week} div:first-child {
