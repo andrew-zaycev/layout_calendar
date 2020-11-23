@@ -10,6 +10,30 @@
   padding-top: 80px;
 }
 
+@for $default from 1 to 27 {
+  .calendar-#{$default} {
+    @for $standart from 1 to 29 {
+      div:nth-child(#{$standart}) {
+        background-color: #eee;
+        border: 1px solid black;
+        height: 100px;
+        width: 100px;
+        display: flex;
+        transition-duration: 0.5s;
+        &::after {
+          content: "#{$standart}";
+          margin: auto;
+        }
+        &:hover {
+          background-color: #f6bfca;
+          transform: translate(0, -20px);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
 @for $a from 28 through 31 {
   .calendar-#{$a} {
     @for $i from 1 through $a {
